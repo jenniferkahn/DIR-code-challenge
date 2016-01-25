@@ -5,8 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// requiring mongoose
+var mongoose = require('mongoose');
+
+require('./db/database');
+
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var surveys = require('./routes/surveys');
 
 var app = express();
 
@@ -24,7 +29,7 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/survey', surveys);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,2 +1,38 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<body>
+<header>
+  <h1> Task Survey </h1>
+</header>
+<section id='survey'>
+<form action="/survey/create" method="post">
+
+    <div class="questions">
+      <ul>
+        <ol><h4>What is your Name?</h4>
+          <input type="text" name="name" value="" ></ol></br>
+        <ol><h4>What is your Age?</h4>
+          <input type="text" name="age" value="" ></ol></br>
+        <ol><h4>What is your Gender?</h4>
+          <input type="radio" name="gender" value="Female"> Female </br>
+          <input type="radio" name="gender" value="Male"> Male </ol></br>
+        <ol><h4>What software do you use to store tasks/items to do?</h4>
+          <input type="radio" name="software" value="Evernote"> Evernote</br>
+          <input type="radio" name="software" value="Googe Drive"> Google Drive</br>
+          <input type="radio" name="software" value="Github"> Github</br>
+          <input type="radio" name="software" value="Excel"> Excel</ol></br>
+        <ol><h4>Have you used any other software than the above? If so, what?</h4>
+          <input type="text" name="otherSoftware" ></ol></br>
+        <ol><h4>What feature(s) do you love about your software?</h4>
+          <input type="text" name="features" ></ol></br>
+        <ol><h4>What feature(s) do you wish you could have?</h4>
+          <input type="text" name="wantedFeatures" ></ol></br>
+
+          <input id="submit button" type="submit" value="Submit"></input>
+      </ul>
+
+    </div>
+
+
+</form>
+</section>
+<footer>Made with Love by Jennifer Kahn</footer>
+</body>
